@@ -1,29 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import StartScreen from './src/screens/StartScreen';
+import AdvertisingScreen from './src/screens/AdvertisingScreen';
 
 export default function App() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View style={styles.container}>
-      {/* <Text>Hello World 1</Text> */}
-      {/* <Image
-          source={{ uri: 'hotel2.jpg' }}
-          style={{ width: 200, height: 200}}
-        /> */}
-      <Image
-        resizeMode="cover"
-        source={require('./assets/images/START.png')}
-        // style={{ width: '100%', height: '100%' }}
-      />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Start"
+          component={StartScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="AdvertisingScreen" component={AdvertisingScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
