@@ -13,7 +13,11 @@ export default function App() {
           component={StartScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="AdvertisingScreen" component={AdvertisingScreen} />
+        <Stack.Screen
+          name="AdvertisingScreen"
+          component={AdvertisingScreen}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
