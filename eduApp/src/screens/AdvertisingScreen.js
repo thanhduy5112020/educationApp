@@ -1,8 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import Slider from '../components/Carousel/Slider';
 
-const AdvertisingScreen = ({navigation}) => {
+const AdvertisingScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* <Text
@@ -23,10 +30,11 @@ const AdvertisingScreen = ({navigation}) => {
         title="Navigate to next screen"
         style={styles.customButton}
         onPress={() => {
-          navigation.navigate('Start');
+          navigation.navigate('Main');
         }}
       >
         <Image
+          style={styles.invisibleBtn}
           resizeMode="cover"
           source={require('../../assets/images/ButtonSlider.png')}
         />
@@ -45,13 +53,14 @@ const styles = StyleSheet.create({
   customButton: {
     position: 'absolute',
     zIndex: 1,
-    top: '80%',
+    top: '78%',
     alignItems: 'center',
     justifyContent: 'center',
     // backgroundColor: '#DDDDDD',
     padding: 10,
     borderRadius: 4,
   },
+  // invisibleBtn: {},
 });
 
 export default AdvertisingScreen;
