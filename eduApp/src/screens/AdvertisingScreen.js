@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import Slider from '../components/Carousel/Slider';
+import Voice from '../components/Voice.js';
 
 const AdvertisingScreen = ({navigation}) => {
   return (
@@ -30,7 +31,9 @@ const AdvertisingScreen = ({navigation}) => {
           resizeMode="cover"
           source={require('../../assets/images/ButtonSlider.png')}
         />
+        {/* <Voice/> */}
       </TouchableOpacity>
+      {/* <Voice /> */}
     </SafeAreaView>
   );
 };
