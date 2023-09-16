@@ -2,6 +2,7 @@ import StartScreen from '../screens/StartScreen';
 import AdvertisingScreen from '../screens/AdvertisingScreen';
 import MainScreen from '../screens/MainScreen';
 import StageScreen from '../screens/StageScreen';
+import ProgressScreen from '../screens/ProgressScreen'
 
 export const stackScreen = [
   {
@@ -20,4 +21,8 @@ export const stackScreen = [
     name: 'Stage',
     component: StageScreen,
   },
+  {
+    name: 'Progress',
+    component: ProgressScreen,
+  }
 ];
