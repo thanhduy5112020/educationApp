@@ -1,23 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { useEffect } from 'react';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 const StartScreen = ({ navigation }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.navigate('AdvertisingScreen');
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Image
-        resizeMode="cover"
-        source={require('../../assets/images/START.png')}
-      />
-      <StatusBar style="auto" />
-
       <TouchableOpacity
-        title="Navigate to next screen"
-        style={styles.customButton}
         onPress={() => {
           navigation.navigate('AdvertisingScreen');
         }}
       >
-        <Text>Tap to move next screen</Text>
+        <Image
+          resizeMode="cover"
+          source={require('../../assets/images/START.png')}
+        />
+        <StatusBar style="auto" />
       </TouchableOpacity>
     </View>
   );
