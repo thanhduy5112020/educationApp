@@ -35,7 +35,7 @@ const MainScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.listeningGame}
         onPress={() => {
-          navigation.navigate('Stage');
+          navigation.navigate('ListeningProgress');
         }}
       >
         <Image
@@ -46,7 +46,7 @@ const MainScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.speakingGame}
         onPress={() => {
-          navigation.navigate('Stage');
+          navigation.navigate('SpeakingProgress');
         }}
       >
         <Image
@@ -57,7 +57,7 @@ const MainScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.puzzleGame}
         onPress={() => {
-          navigation.navigate('Stage');
+          navigation.navigate('PuzzleProgress');
         }}
       >
         <Image
@@ -89,26 +89,29 @@ const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 1,
     bottom: '8%',
+    opacity: 0,
   },
   speakingGame: {
     position: 'absolute',
     zIndex: 1,
     bottom: '8%',
     left: '9.1%',
+    opacity: 0,
   },
   puzzleGame: {
     position: 'absolute',
     zIndex: 1,
     bottom: '8%',
     right: '9.1%',
+    opacity: 0,
   },
   searchingBtn: {
     position: 'absolute',
     zIndex: 1,
     left: '9.1%',
     top: '10%',
-  }
-
+    opacity: 1,
+  },
 });
 
 export default MainScreen;
