@@ -35,7 +35,7 @@ const MainScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.listeningGame}
         onPress={() => {
-          navigation.navigate('Stage');
+          navigation.navigate('Progress');
         }}
       >
         <Image
@@ -46,7 +46,7 @@ const MainScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.speakingGame}
         onPress={() => {
-          navigation.navigate('Stage');
+          navigation.navigate('Progress');
         }}
       >
         <Image
@@ -57,7 +57,7 @@ const MainScreen = ({ navigation }) => {
       <TouchableOpacity
         style={styles.puzzleGame}
         onPress={() => {
-          navigation.navigate('Stage');
+          navigation.navigate('Progress');
         }}
       >
         <Image
