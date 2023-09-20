@@ -19,6 +19,18 @@ const ProgressScreen = ({ navigation }) => {
           source={require('../../../assets/images/ProgressScreen/BackButton.png')}
         />
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.number2}
+        onPress={() => {
+          navigation.navigate('ListeningGame1');
+        }}
+      >
+        <Image
+          resizeMode="cover"
+          source={require('../../../assets/images/ProgressScreen/Number2.png')}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -36,6 +48,14 @@ const styles = StyleSheet.create({
     top: '8.5%',
     left: '9.2%',
     borderRadius: 4,
+    opacity: 0,
+    // pointerEvents: 'cursor',
+  },
+  number2: {
+    position: 'absolute',
+    zIndex: 1,
+    bottom: 200,
+    left: 370,
     opacity: 0,
     // pointerEvents: 'cursor',
   },
