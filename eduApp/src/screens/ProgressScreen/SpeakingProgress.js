@@ -1,22 +1,21 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-const StageScreen = ({ navigation }) => {
+import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
+const SpeakingProgress = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image
         resizeMode="cover"
-        source={require('../../assets/images/StageScreen/StageScreen.png')}
+        source={require('../../../assets/images/ProgressScreen/SpeakingProgress.png')}
       />
       <TouchableOpacity
-        style={styles.closeBtn}
+        style={styles.backBtn}
         onPress={() => {
           navigation.pop();
         }}
       >
         <Image
           resizeMode="cover"
-          source={require('../../assets/images/StageScreen/CloseButton.png')}
+          source={require('../../../assets/images/ProgressScreen/BackButton.png')}
         />
       </TouchableOpacity>
     </View>
@@ -30,15 +29,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  closeBtn: {
+  backBtn: {
     position: 'absolute',
     zIndex: 1,
-    top: '8.8%',
-    right: '9.2%',
+    top: '8.5%',
+    left: '9.2%',
     borderRadius: 4,
     opacity: 0,
     // pointerEvents: 'cursor',
   },
 });
 
-export default StageScreen;
+export default SpeakingProgress;
