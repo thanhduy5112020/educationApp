@@ -7,6 +7,9 @@ const AnswerButton = ({
   left = '50%',
   selectedOrder,
   callbackFunc,
+  type = 'small',
+  customWidth,
+  customHeight,
   id,
 }) => {
   const [isSelected, setSelected] = useState(false);
@@ -47,6 +50,16 @@ const AnswerButton = ({
             {
               color: !isSelected ? '#63A9FF' : '#FFF',
             },
+            {
+              fontSize: type === 'small' ? 36 : 24,
+              height: customHeight ? customHeight : type === 'small' ? 68 : 36,
+              lineHeight: customHeight
+                ? customHeight
+                : type === 'small'
+                ? 68
+                : 36,
+              width: customWidth ? customWidth : type === 'small' ? 238 : 480,
+            },
           ]}
         >
           {content}
@@ -77,11 +90,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    lineHeight: 68,
     color: '#63A9FF',
-    fontSize: 36,
-    height: 68,
-    width: 238,
   },
 });
 

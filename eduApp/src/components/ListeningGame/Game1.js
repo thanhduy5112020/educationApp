@@ -72,6 +72,7 @@ const Game1 = ({ navigation }) => {
       />
       {anwsOptions.map((item, index) => (
         <AnswerButton
+          key={index}
           id={index}
           content={item.content}
           top={item.top}

@@ -2,37 +2,27 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Image } from 'react-native';
 import ListeningBackground from './ListeningBackground';
 import AnswerButton from '../../core/Button/AnswerButton';
-const Game2 = ({ navigation }) => {
+const Game4 = ({ navigation }) => {
   const [anwsOptions, setAnwsOptions] = useState([
     {
-      content: '나는 오늘 놀이공원에 놀러간다',
-      top: 390,
-      left: 450,
+      content: 'O',
+      top: 590,
+      left: 460,
     },
     {
-      content: '나는 내일 워터파크에 가기로 했다',
-      top: 460,
-      left: 450,
-    },
-    {
-      content: '너는 매일 아침 일찍 운동을 한다',
-      top: 530,
-      left: 450,
-    },
-    {
-      content: '노는 아이는 일찍 잠에 든다',
-      top: 600,
-      left: 450,
+      content: 'X',
+      top: 590,
+      left: 740,
     },
   ]);
   return (
     <>
       <ListeningBackground
-        title="문장 훈련"
-        question="소리를 듣고 올바른 문장을 선택해보자!"
+        title="소음 훈련"
+        question="소음을 듣고 그림과 상황이 일치하면 O, 그렇지 않으면 X를 선택해보자!"
         navigation={navigation}
-        leftPosContent="35%"
-        destination="ListeningGame3"
+        leftPosContent="25%"
+        destination="ListeningGame5"
       />
       <TouchableOpacity
         style={styles.audio}
@@ -41,22 +31,32 @@ const Game2 = ({ navigation }) => {
         }}
       >
         <Image
+          style={{ width: 40, height: 40 }}
           resizeMode="cover"
           source={require('../../../assets/images/core/Audio.png')}
         />
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.car}
+        onPress={() => {
+          console.log('playing the audio');
+        }}
+      >
+        <Image
+          //   style={{ width: 40, height: 40 }}
+          resizeMode="cover"
+          source={require('../../../assets/images/ListeningGame/Game4/Car.png')}
+        />
+      </TouchableOpacity>
       {anwsOptions.map((item, index) => (
         <AnswerButton
-          type="long"
+          customWidth={179}
+          customHeight={36}
           key={index}
           id={index}
           content={item.content}
           top={item.top}
           left={item.left}
-          // selectedOrder={item.order}
-          // callbackFunc={(isSelected, index) =>
-          //   updateStackChoice(isSelected, index)
-          // }
         />
       ))}
     </>
@@ -66,11 +66,17 @@ const Game2 = ({ navigation }) => {
 const styles = StyleSheet.create({
   audio: {
     position: 'absolute',
-    top: 280,
-    left: '46%',
+    top: 520,
+    left: '32%',
     zIndex: 3,
     // fontWeight: 700,
   },
+  car: {
+    position: 'absolute',
+    top: 320,
+    left: '31%',
+    zIndex: 2,
+  },
 });
 
-export default Game2;
+export default Game4;

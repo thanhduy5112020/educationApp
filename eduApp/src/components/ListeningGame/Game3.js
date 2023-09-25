@@ -2,37 +2,32 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Image } from 'react-native';
 import ListeningBackground from './ListeningBackground';
 import AnswerButton from '../../core/Button/AnswerButton';
-const Game2 = ({ navigation }) => {
+const Game3 = ({ navigation }) => {
   const [anwsOptions, setAnwsOptions] = useState([
     {
-      content: '나는 오늘 놀이공원에 놀러간다',
-      top: 390,
-      left: 450,
-    },
-    {
-      content: '나는 내일 워터파크에 가기로 했다',
-      top: 460,
-      left: 450,
-    },
-    {
-      content: '너는 매일 아침 일찍 운동을 한다',
+      content: '붉은 수건',
       top: 530,
-      left: 450,
+      left: 400,
     },
     {
-      content: '노는 아이는 일찍 잠에 든다',
-      top: 600,
-      left: 450,
+      content: '검은 머리',
+      top: 530,
+      left: 630,
+    },
+    {
+      content: '휴대폰',
+      top: 530,
+      left: 860,
     },
   ]);
   return (
     <>
       <ListeningBackground
-        title="문장 훈련"
-        question="소리를 듣고 올바른 문장을 선택해보자!"
+        title="소음 훈련"
+        question="소음 속 단어를 듣고 정답을 골라보자!"
         navigation={navigation}
         leftPosContent="35%"
-        destination="ListeningGame3"
+        destination="ListeningGame4"
       />
       <TouchableOpacity
         style={styles.audio}
@@ -41,22 +36,19 @@ const Game2 = ({ navigation }) => {
         }}
       >
         <Image
+          style={{ width: 170, height: 170 }}
           resizeMode="cover"
           source={require('../../../assets/images/core/Audio.png')}
         />
       </TouchableOpacity>
       {anwsOptions.map((item, index) => (
         <AnswerButton
-          type="long"
+          customWidth={135}
           key={index}
           id={index}
           content={item.content}
           top={item.top}
           left={item.left}
-          // selectedOrder={item.order}
-          // callbackFunc={(isSelected, index) =>
-          //   updateStackChoice(isSelected, index)
-          // }
         />
       ))}
     </>
@@ -66,11 +58,11 @@ const Game2 = ({ navigation }) => {
 const styles = StyleSheet.create({
   audio: {
     position: 'absolute',
-    top: 280,
-    left: '46%',
+    top: 320,
+    left: '44%',
     zIndex: 3,
     // fontWeight: 700,
   },
 });
 
-export default Game2;
+export default Game3;
