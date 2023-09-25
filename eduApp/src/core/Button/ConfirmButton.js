@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-const ConfirmButton = ({ style = styles.absolute, Modal }) => {
+const ConfirmButton = ({
+  style = styles.absolute,
+  Modal,
+  destination,
+  navigation,
+}) => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <TouchableOpacity
       onPress={() => {
         setModalVisible(true);
+        // if (destination) {
+        //   navigation.navigate(destination);
+        // }
       }}
       style={style}
     >
@@ -14,7 +22,12 @@ const ConfirmButton = ({ style = styles.absolute, Modal }) => {
         resizeMode="cover"
         source={require('../../../assets/images/core/ConfirmButton.png')}
       />
-      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
+      <Modal
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+        destination={destination}
+        navigation={navigation}
+      />
     </TouchableOpacity>
   );
 };

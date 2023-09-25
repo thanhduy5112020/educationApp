@@ -8,7 +8,12 @@ import {
   Image,
 } from 'react-native';
 
-const ListeningModalDialog = ({ modalVisible, setModalVisible }) => {
+const ListeningModalDialog = ({
+  modalVisible,
+  setModalVisible,
+  navigation,
+  destination,
+}) => {
   //   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -25,7 +30,10 @@ const ListeningModalDialog = ({ modalVisible, setModalVisible }) => {
           <View style={styles.modalView}>
             <TouchableOpacity
               style={{ ...styles.openButton, backgroundColor: '#2196F3' }}
-              onPress={() => setModalVisible(!modalVisible)}
+              onPress={() => {
+                setModalVisible(!modalVisible);
+                if (destination) navigation.navigate(destination);
+              }}
             >
               <Image
                 resizeMode="cover"

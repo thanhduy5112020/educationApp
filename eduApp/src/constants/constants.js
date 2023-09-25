@@ -7,6 +7,7 @@ import ListeningProgress from '../screens/ProgressScreen/ListeningProgress';
 import SpeakingProgress from '../screens/ProgressScreen/SpeakingProgress';
 import PuzzleProgress from '../screens/ProgressScreen/PuzzleProgress';
 import ListeningGame1 from '../screens/ListeningScreen/ListeningGame1';
+import ListeningGame2 from '../screens/ListeningScreen/ListeningGame2';
 // import ListeningModalDialog from '../core/Modal/ListeningModalDialog';
 
 export const stackScreen = [
@@ -45,5 +46,9 @@ export const stackScreen = [
   {
     name: 'ListeningGame1',
     component: ListeningGame1,
+  },
+  {
+    name: 'ListeningGame2',
+    component: ListeningGame2,
   },
 ];

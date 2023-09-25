@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Game1 from '../../components/ListeningGame/Game1';
+import Game2 from '../../components/ListeningGame/Game2';
 // import ListeningBackground from '../../components/ListeningGame/ListeningBackground';
-const ListeningGame1 = ({ navigation }) => {
+const ListeningGame2 = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Game1 navigation={navigation} />
+      <Game2 navigation={navigation} />
     </View>
   );
 };
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListeningGame1;
+export default ListeningGame2;
