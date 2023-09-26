@@ -6,6 +6,7 @@ import ProgressScreen from '../screens/ProgressScreen/ProgressScreen';
 import ListeningProgress from '../screens/ProgressScreen/ListeningProgress';
 import SpeakingProgress from '../screens/ProgressScreen/SpeakingProgress';
 import PuzzleProgress from '../screens/ProgressScreen/PuzzleProgress';
+import Stage1Screen from '../screens/Stage1Screen/Stage1Screen'
 
 export const stackScreen = [
   {
@@ -39,5 +40,9 @@ export const stackScreen = [
   {
     name: 'PuzzleProgress',
     component: PuzzleProgress,
+  },
+  {
+    name: 'Stage1',
+    component: Stage1Screen,
   },
 ];

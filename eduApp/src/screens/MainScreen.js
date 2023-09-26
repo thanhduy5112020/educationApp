@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     top: '50%',
     left: '11.6%',
     borderRadius: 4,
-    // opacity: 0,
+    opacity: 0,
     // pointerEvents: 'none',
   },
   listeningGame: {
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
     left: '9.1%',
     top: '10%',
-    opacity: 1,
+    opacity: 0,
   },
 });
 

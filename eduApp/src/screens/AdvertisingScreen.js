@@ -41,7 +41,6 @@ const AdvertisingScreen = ({ navigation }) => {
         />
         {/* <Voice/> */}
       </TouchableOpacity>
-      {/* <Voice /> */}
     </SafeAreaView>
   );
 };
