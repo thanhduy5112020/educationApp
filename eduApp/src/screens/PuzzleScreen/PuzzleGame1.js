@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import Game1 from '../../components/PuzzleGame/Game1';
 
 const PuzzleGame1 = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text>This is a puzzle game</Text>
+      <Game1 />
     </View>
   );
 };

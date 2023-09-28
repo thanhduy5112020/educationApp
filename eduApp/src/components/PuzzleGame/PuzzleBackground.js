@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 import BackButton from '../../core/Button/BackButton';
 import ConfirmButton from '../../core/Button/ConfirmButton';
 import ListeningModalDialog from '../../core/Modal/ListeningModalDialog';
-const ListeningBackground = ({
+const PuzzleBackground = ({
   navigation,
   title,
   question,
@@ -15,8 +15,8 @@ const ListeningBackground = ({
     <>
       <Image
         resizeMode="cover"
-        source={require('../../../assets/images/ListeningGame/ListeningBackground.png')}
-        // source={require('../../../assets/images/ListeningGame/Game5/FullScreen.png')}
+        source={require('../../../assets/images/PuzzleGame/PuzzleBackground.png')}
+        // source={require('../../../assets/images/PuzzleGame/Game1/FullScreen.png')}
       ></Image>
       <View style={[styles.textTitle, { left: leftPosTitle }]}>
         <Text style={{ fontSize: 50, fontWeight: 'bold' }}>{title}</Text>
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListeningBackground;
+export default PuzzleBackground;
