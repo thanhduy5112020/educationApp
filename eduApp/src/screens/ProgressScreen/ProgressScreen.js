@@ -53,7 +53,8 @@ const ProgressScreen = ({ navigation }) => {
           <TouchableOpacity
             style={styles.startBtn}
             onPress={() => {
-              navigation.navigate('Stage1');
+              // navigation.navigate('Stage1');
+              navigation.navigate('ListeningGame1');
             }}
           >
             <Image
@@ -118,7 +119,15 @@ const styles = StyleSheet.create({
     zIndex: 1,
     top: '85%',
     right: '40%',
-  }
+  },
+  number2: {
+    position: 'absolute',
+    zIndex: 1,
+    bottom: 200,
+    left: 370,
+    opacity: 0,
+    // pointerEvents: 'cursor',
+  },
 });
 
 export default ProgressScreen;
