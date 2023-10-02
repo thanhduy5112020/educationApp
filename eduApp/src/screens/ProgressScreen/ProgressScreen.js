@@ -54,7 +54,7 @@ const ProgressScreen = ({ navigation }) => {
             style={styles.startBtn}
             onPress={() => {
               // navigation.navigate('Stage1');
-              navigation.navigate('ListeningGame1');
+              navigation.navigate('SpeakingGame1');
             }}
           >
             <Image

@@ -1,0 +1,70 @@
+import React, { useState, useRef } from 'react';
+import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
+import SpeakingBackground from './SpeakingBackground';
+
+const Game2 = ({ navigation }) => {
+  return (
+    <>
+      <SpeakingBackground
+        title="문장 말하기"
+        question="단어를 이용해 문장을 만든 후 직접 읽어보자!"
+        destination="SpeakingGame3"
+        navigation={navigation}
+      />
+      <View
+       style={styles.blankText}
+      >
+        <Image
+        
+          resizeMode="cover"
+          source={require('../../../assets/images/SpeakingGame/Game2/blankText.png')}
+        />
+      </View>
+
+      <View
+       style={styles.hint}
+      >
+        <Image
+        
+          resizeMode="cover"
+          source={require('../../../assets/images/SpeakingGame/Game2/hint.png')}
+        />
+      </View>
+
+      <View
+       style={styles.fullText}
+      >
+        <Image
+        
+          resizeMode="cover"
+          source={require('../../../assets/images/SpeakingGame/Game2/fullText.png')}
+        />
+      </View>
+
+     
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
+  blankText: {
+    position: 'absolute',
+    top: 290,
+
+    zIndex: 3,
+  },
+
+  hint: {
+    position: 'absolute',
+    top: 390,
+    zIndex: 3,
+  },
+
+  fullText: {
+    position: 'absolute',
+    top: 550,
+    zIndex: 3,
+  }
+});
+
+export default Game2;
