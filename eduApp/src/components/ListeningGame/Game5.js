@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, TouchableOpacity, Image } from 'react-native';
 import ListeningBackground from './ListeningBackground';
 import AnswerButton from '../../core/Button/AnswerButton';
+import { Audio } from 'expo-av';
 const Game5 = ({ navigation }) => {
   const [anwsOptions, setAnwsOptions] = useState([
     {
@@ -32,8 +33,16 @@ const Game5 = ({ navigation }) => {
       />
       <TouchableOpacity
         style={styles.yellowBoard}
-        onPress={() => {
-          console.log('playing the audio');
+        onPress={async () => {
+          const soundObject = new Audio.Sound();
+          try {
+            await soundObject.loadAsync(
+              require('../../../assets/audio/soundTraining.wav'),
+            );
+            await soundObject.playAsync();
+          } catch (error) {
+            console.log('Error playing sound:', error);
+          }
         }}
       >
         <Image
@@ -44,8 +53,16 @@ const Game5 = ({ navigation }) => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.audio}
-        onPress={() => {
-          console.log('playing the audio');
+        onPress={async () => {
+          const soundObject = new Audio.Sound();
+          try {
+            await soundObject.loadAsync(
+              require('../../../assets/audio/soundTraining.wav'),
+            );
+            await soundObject.playAsync();
+          } catch (error) {
+            console.log('Error playing sound:', error);
+          }
         }}
       >
         <Image

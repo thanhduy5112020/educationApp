@@ -5,6 +5,8 @@ import BackButton from '../../core/Button/BackButton';
 import ListeningModalDialog from '../../core/Modal/ListeningModalDialog';
 import AnswerButton from '../../core/Button/AnswerButton';
 import ListeningBackground from './ListeningBackground';
+import { Audio } from 'expo-av';
+
 const Game1 = ({ navigation }) => {
   const [stackChoiceOrder, setStackChoiceOrder] = useState(0);
   let removedOrderArr = useRef([]);
@@ -85,8 +87,16 @@ const Game1 = ({ navigation }) => {
       ))}
       <TouchableOpacity
         style={styles.audio}
-        onPress={() => {
-          console.log('playing the audio');
+        onPress={async () => {
+          const soundObject = new Audio.Sound();
+          try {
+            await soundObject.loadAsync(
+              require('../../../assets/audio/Choose4words.mp3'),
+            );
+            await soundObject.playAsync();
+          } catch (error) {
+            console.log('Error playing sound:', error);
+          }
         }}
       >
         <Image
