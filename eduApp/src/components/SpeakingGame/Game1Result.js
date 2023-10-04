@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import SpeakingBackground from './SpeakingBackground';
+import { Audio } from 'expo-av';
+import SpeakingTwoButton from '../../core/Button/SpeakingTwoButton';
 
 const Game1Result = ({ navigation }) => {
   return (
@@ -13,8 +15,16 @@ const Game1Result = ({ navigation }) => {
       />
       <TouchableOpacity
         style={styles.wave1}
-        onPress={() => {
-          console.log('playing the audio');
+        onPress={async () => {
+          const soundObject = new Audio.Sound();
+          try {
+            await soundObject.loadAsync(
+              require('../../../assets/audio/SpeakingWoman.mp3'),
+            );
+            await soundObject.playAsync();
+          } catch (error) {
+            console.log('Error playing sound:', error);
+          }
         }}
       >
         <Image
@@ -25,8 +35,16 @@ const Game1Result = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.wave2}
-        onPress={() => {
-          console.log('playing the audio');
+        onPress={async () => {
+          const soundObject = new Audio.Sound();
+          try {
+            await soundObject.loadAsync(
+              require('../../../assets/audio/SpeakingKid.mp3'),
+            );
+            await soundObject.playAsync();
+          } catch (error) {
+            console.log('Error playing sound:', error);
+          }
         }}
       >
         <Image
@@ -34,6 +52,7 @@ const Game1Result = ({ navigation }) => {
           source={require('../../../assets/images/SpeakingGame/Game1/wave.png')}
         />
       </TouchableOpacity>
+      <SpeakingTwoButton destination="SpeakingGame2" navigation={navigation}/>
     </>
   );
 };

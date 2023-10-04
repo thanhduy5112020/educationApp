@@ -37,7 +37,7 @@ const Game5 = ({ navigation }) => {
           const soundObject = new Audio.Sound();
           try {
             await soundObject.loadAsync(
-              require('../../../assets/audio/soundTraining.wav'),
+              require('../../../assets/audio/ListenStory.mp3'),
             );
             await soundObject.playAsync();
           } catch (error) {
@@ -57,7 +57,7 @@ const Game5 = ({ navigation }) => {
           const soundObject = new Audio.Sound();
           try {
             await soundObject.loadAsync(
-              require('../../../assets/audio/soundTraining.wav'),
+              require('../../../assets/audio/ListenStory.mp3'),
             );
             await soundObject.playAsync();
           } catch (error) {

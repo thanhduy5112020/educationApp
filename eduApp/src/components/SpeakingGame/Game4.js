@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import SpeakingBackground from './SpeakingBackground';
+import RecordButton from '../../core/Button/RecordButton';
 const Game4 = ({ navigation }) => {
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
@@ -59,7 +60,7 @@ const Game4 = ({ navigation }) => {
           source={require('../../../assets/images/SpeakingGame/Game4/ans3.png')}
         />
       </View>
-
+      <RecordButton destination="SpeakingGame4Result" navigation={navigation}/>
     </>
   );
 };

@@ -13,15 +13,6 @@ import Voice from '../components/Voice.js';
 const AdvertisingScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Text
-        style={{
-          fontFamily: 'SUIT',
-          fontWeight: 'bold',
-          fontSize: 12,
-        }}
-      >
-        청능 훈련을 통해 일상생활속의 대화를 연결시켜드려요!
-      </Text> */}
       <Image
         resizeMode="cover"
         source={require('../../assets/images/background.png')}

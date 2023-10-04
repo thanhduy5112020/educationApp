@@ -36,7 +36,7 @@ const Game3 = ({ navigation }) => {
           const soundObject = new Audio.Sound();
           try {
             await soundObject.loadAsync(
-              require('../../../assets/audio/soundTraining.wav'),
+              require('../../../assets/audio/soundTrainingBoil.mp3'),
             );
             await soundObject.playAsync();
           } catch (error) {

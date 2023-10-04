@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import SpeakingBackground from './SpeakingBackground';
 import RecordButton from '../../core/Button/RecordButton'
+import { Audio } from 'expo-av';
+import Voice from 'react-native-voice';
 
 const Game1 = ({ navigation }) => {
   return (
@@ -14,8 +16,16 @@ const Game1 = ({ navigation }) => {
       />
       <TouchableOpacity
         style={styles.wave1}
-        onPress={() => {
-          console.log('playing the audio');
+        onPress={async () => {
+          const soundObject = new Audio.Sound();
+          try {
+            await soundObject.loadAsync(
+              require('../../../assets/audio/SpeakingWoman.mp3'),
+            );
+            await soundObject.playAsync();
+          } catch (error) {
+            console.log('Error playing sound:', error);
+          }
         }}
       >
         <Image

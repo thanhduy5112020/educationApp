@@ -15,8 +15,11 @@ import PuzzleGame1 from '../screens/PuzzleScreen/PuzzleGame1';
 import SpeakingGame1 from '../screens/SpeakingScreen/SpeakingGame1';
 import SpeakingGame1Result from '../screens/SpeakingScreen/SpeakingGame1Result';
 import SpeakingGame2 from '../screens/SpeakingScreen/SpeakingGame2';
+import SpeakingGame2Result from '../screens/SpeakingScreen/SpeakingGame2Result';
 import SpeakingGame3 from '../screens/SpeakingScreen/SpeakingGame3';
+import SpeakingGame3Result from '../screens/SpeakingScreen/SpeakingGame3Result';
 import SpeakingGame4 from '../screens/SpeakingScreen/SpeakingGame4';
+import SpeakingGame4Result from '../screens/SpeakingScreen/SpeakingGame4Result';
 // import ListeningModalDialog from '../core/Modal/ListeningModalDialog';
 import Stage1Screen from '../screens/Stage1Screen/Stage1Screen'
 
@@ -94,11 +97,23 @@ export const stackScreen = [
     component: SpeakingGame2,
   },
   {
+    name: 'SpeakingGame2Result',
+    component: SpeakingGame2Result,
+  },
+  {
     name: 'SpeakingGame3',
     component: SpeakingGame3,
   },
   {
+    name: 'SpeakingGame3Result',
+    component: SpeakingGame3Result,
+  },
+  {
     name: 'SpeakingGame4',
     component: SpeakingGame4,
+  },
+  {
+    name: 'SpeakingGame4Result',
+    component: SpeakingGame4Result,
   },
 ];

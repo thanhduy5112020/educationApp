@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import SpeakingBackground from './SpeakingBackground';
+import RecordButton from '../../core/Button/RecordButton';
 
 const Game2 = ({ navigation }) => {
   return (
@@ -41,6 +42,7 @@ const Game2 = ({ navigation }) => {
         />
       </View>
 
+      <RecordButton  destination="SpeakingGame2Result" navigation={navigation} />
      
     </>
   );

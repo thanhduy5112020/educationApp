@@ -28,7 +28,12 @@ const ProgressScreen = ({ navigation }) => {
 
       <TouchableOpacity
         style={styles.yellowNumber}
-        onPress={toggleInstructions}
+        // onPress={toggleInstructions}
+        onPress={() => {
+          // navigation.navigate('Stage1');
+          navigation.navigate('SpeakingGame1');
+        }}
+
       >
         <Image
           resizeMode="cover"
@@ -84,8 +89,8 @@ const styles = StyleSheet.create({
   backBtn: {
     position: 'absolute',
     zIndex: 1,
-    top: '8.5%',
-    left: '9.2%',
+    top: '6.9%',
+    left: '11.3%',
     borderRadius: 4,
     opacity: 0,
     // pointerEvents: 'cursor',

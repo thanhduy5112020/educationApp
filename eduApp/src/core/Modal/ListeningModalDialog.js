@@ -39,6 +39,10 @@ const ListeningModalDialog = ({
                 resizeMode="cover"
                 source={require('../../../assets/images/core/ListeningModalDialog.png')}
               />
+               {/* <Image
+                resizeMode="contain"
+                source={require('../../../assets/images/core/correct.gif')} 
+              /> */}
             </TouchableOpacity>
           </View>
         </View>
