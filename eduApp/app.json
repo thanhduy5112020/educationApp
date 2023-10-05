@@ -25,11 +25,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "permissions": [
-          "android.permission.RECORD_AUDIO"
-        ],
-        "package": "com.anonymous.SpeectToTextApp"
+        "backgroundColor": "#ffffff"
       },
       "permissions": [
         "android.permission.RECORD_AUDIO"
@@ -50,7 +46,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "1f681879-e465-40c1-94fb-fb8a2861d2a3"
+        "projectId": "d1c24f18-0b77-484f-939f-9f12edb5637d"
       }
     }
   }

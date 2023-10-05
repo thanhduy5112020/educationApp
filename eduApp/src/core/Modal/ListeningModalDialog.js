@@ -39,11 +39,12 @@ const ListeningModalDialog = ({
                 resizeMode="cover"
                 source={require('../../../assets/images/core/ListeningModalDialog.png')}
               />
-               {/* <Image
-                resizeMode="contain"
-                source={require('../../../assets/images/core/correct.gif')} 
-              /> */}
             </TouchableOpacity>
+            <Image
+              style={styles.gifImage}
+              resizeMode="cover"
+              source={require('../../../assets/images/gif/correct.gif')}
+            />
           </View>
         </View>
       </Modal>
@@ -62,8 +63,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 22,
+    position: 'relative',
   },
   modalView: {
+    position: 'relative',
     margin: 20,
     backgroundColor: 'white',
     borderRadius: 20,
@@ -92,6 +95,10 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
+  },
+  gifImage: {
+    position: 'absolute',
+    top: 50,
   },
 });
 

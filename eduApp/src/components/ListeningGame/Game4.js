@@ -9,13 +9,27 @@ const Game4 = ({ navigation }) => {
       content: 'O',
       top: 590,
       left: 460,
+      selected: false,
     },
     {
       content: 'X',
       top: 590,
       left: 740,
+      selected: false,
     },
   ]);
+
+  const handleOneChoice = (index) => {
+    if (anwsOptions[index].selected) return;
+    const newAnsOptions = anwsOptions.map((ans, idx) => {
+      return {
+        ...ans,
+        selected: index === idx,
+      };
+    });
+    setAnwsOptions(newAnsOptions);
+  };
+
   return (
     <>
       <ListeningBackground
@@ -74,6 +88,9 @@ const Game4 = ({ navigation }) => {
           content={item.content}
           top={item.top}
           left={item.left}
+          multipleChoice={false}
+          handleOneChoice={(index) => handleOneChoice(index)}
+          isUniqueSelected={item.selected}
         />
       ))}
     </>

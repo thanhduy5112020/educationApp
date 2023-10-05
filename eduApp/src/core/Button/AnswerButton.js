@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const AnswerButton = ({
@@ -10,12 +10,24 @@ const AnswerButton = ({
   type = 'small',
   customWidth,
   customHeight,
+  multipleChoice = true,
+  handleOneChoice,
+  isUniqueSelected = false,
   id,
 }) => {
   const [isSelected, setSelected] = useState(false);
+
+  useEffect(() => {
+    setSelected(false || isUniqueSelected);
+  }, [isUniqueSelected]);
+
   const handleButtonPress = () => {
-    if (callbackFunc) callbackFunc(!isSelected, id);
-    setSelected(!isSelected);
+    if (multipleChoice) {
+      if (callbackFunc) callbackFunc(!isSelected, id);
+      setSelected(!isSelected);
+    } else {
+      handleOneChoice(id);
+    }
   };
   // let imageSource;
   const sourceImage = () => {

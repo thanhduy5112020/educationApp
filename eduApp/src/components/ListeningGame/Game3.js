@@ -9,18 +9,32 @@ const Game3 = ({ navigation }) => {
       content: '붉은 수건',
       top: 530,
       left: 400,
+      selected: false,
     },
     {
       content: '검은 머리',
       top: 530,
       left: 630,
+      selected: false,
     },
     {
       content: '휴대폰',
       top: 530,
       left: 860,
+      selected: false,
     },
   ]);
+  const handleOneChoice = (index) => {
+    if (anwsOptions[index].selected) return;
+    const newAnsOptions = anwsOptions.map((ans, idx) => {
+      return {
+        ...ans,
+        selected: index === idx,
+      };
+    });
+    setAnwsOptions(newAnsOptions);
+  };
+
   return (
     <>
       <ListeningBackground
@@ -58,6 +72,9 @@ const Game3 = ({ navigation }) => {
           content={item.content}
           top={item.top}
           left={item.left}
+          multipleChoice={false}
+          handleOneChoice={(index) => handleOneChoice(index)}
+          isUniqueSelected={item.selected}
         />
       ))}
     </>

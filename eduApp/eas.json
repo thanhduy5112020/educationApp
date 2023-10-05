@@ -13,6 +13,25 @@
     "preview": {
       "distribution": "internal"
     },
+    "ver1": {
+      "developmentClient": false,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      },
+      "env": {
+        "ENVIRONMENT": "production"
+      }
+    },
+    "ver2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "ver3": {
+      "developmentClient": true
+    },
     "production": {}
   },
   "submit": {

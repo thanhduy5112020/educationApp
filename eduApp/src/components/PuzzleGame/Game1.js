@@ -73,32 +73,38 @@ const Game1 = ({ navigation }) => {
 
   useEffect(() => {
     if (flipCards.length >= 2) {
-      // check two cards match or not
-      const isMatched = cards[flipCards[0]].match === cards[flipCards[1]].match;
-      if (isMatched) {
-        const newCardsState = cards.map((item, idx) => {
-          if (flipCards.findIndex((item) => item === idx) > -1) {
-            return { ...item, removed: true };
-          }
-          return { ...item };
-        });
-        setCards(newCardsState);
-      } else {
-        const newCardsState = cards.map((item, idx) => {
-          if (flipCards.findIndex((item) => item === idx) > -1) {
-            return { ...item, selected: false };
-          }
-          return { ...item };
-        });
-        setCards(newCardsState);
-      }
-      setFlipCards([]);
+      const timer = setTimeout(() => {
+        // check two cards match or not
+        const isMatched =
+          cards[flipCards[0]].match === cards[flipCards[1]].match;
+        if (isMatched) {
+          const newCardsState = cards.map((item, idx) => {
+            if (flipCards.findIndex((item) => item === idx) > -1) {
+              return { ...item, removed: true };
+            }
+            return { ...item };
+          });
+          setCards(newCardsState);
+        } else {
+          const newCardsState = cards.map((item, idx) => {
+            if (flipCards.findIndex((item) => item === idx) > -1) {
+              return { ...item, selected: false };
+            }
+            return { ...item };
+          });
+          setCards(newCardsState);
+        }
+        setFlipCards([]);
+      }, 1000);
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, [flipCards]);
 
   const handleSelectedCard = (index) => {
-    console.log('key is', index);
     const newCards = cards.map((item, idx) => {
+      if (item.removed) return item;
       if (idx === index) {
         const updatedSelected = !item?.selected;
         if (updatedSelected) {
@@ -124,20 +130,17 @@ const Game1 = ({ navigation }) => {
         leftPosTitle="41%"
         destination="PuzzleGame1"
       />
-      {cards?.map(
-        (item, index) =>
-          !item?.removed && (
-            <Card
-              key={index}
-              index={index}
-              hiddenImage={item.hiddenImage}
-              top={item.top}
-              left={item.left}
-              selected={item.selected}
-              handSelectedCard={(index) => handleSelectedCard(index)}
-            />
-          ),
-      )}
+      {cards?.map((item, index) => (
+        <Card
+          key={index}
+          index={index}
+          hiddenImage={item.hiddenImage}
+          top={item.top}
+          left={item.left}
+          selected={item.selected}
+          handSelectedCard={(index) => handleSelectedCard(index)}
+        />
+      ))}
     </>
   );
 };

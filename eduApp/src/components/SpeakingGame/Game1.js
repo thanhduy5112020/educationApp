@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { StyleSheet, View, TouchableOpacity, Image, Text } from 'react-native';
 import SpeakingBackground from './SpeakingBackground';
-import RecordButton from '../../core/Button/RecordButton'
+import RecordButton from '../../core/Button/RecordButton';
 import { Audio } from 'expo-av';
-import Voice from 'react-native-voice';
+// import Voice from 'react-native-voice';
 
 const Game1 = ({ navigation }) => {
   return (
@@ -40,7 +40,7 @@ const Game1 = ({ navigation }) => {
           source={require('../../../assets/images/SpeakingGame/Game1/wave2.png')}
         />
       </View>
-      <RecordButton  destination="SpeakingGame1Result" navigation={navigation} />
+      <RecordButton destination="SpeakingGame1Result" navigation={navigation} />
     </>
   );
 };

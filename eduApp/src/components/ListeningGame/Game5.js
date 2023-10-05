@@ -9,18 +9,32 @@ const Game5 = ({ navigation }) => {
       content: '검은 머리',
       top: 570,
       left: 460,
+      selected: false,
     },
     {
       content: '빨강 머리',
       top: 570,
       left: 650,
+      selected: false,
     },
     {
       content: '노랑 머리',
       top: 570,
       left: 840,
+      selected: false,
     },
   ]);
+  const handleOneChoice = (index) => {
+    if (anwsOptions[index].selected) return;
+    const newAnsOptions = anwsOptions.map((ans, idx) => {
+      return {
+        ...ans,
+        selected: index === idx,
+      };
+    });
+    setAnwsOptions(newAnsOptions);
+  };
+
   return (
     <>
       <ListeningBackground
@@ -81,6 +95,9 @@ const Game5 = ({ navigation }) => {
           content={item.content}
           top={item.top}
           left={item.left}
+          multipleChoice={false}
+          handleOneChoice={(index) => handleOneChoice(index)}
+          isUniqueSelected={item.selected}
         />
       ))}
     </>
