@@ -37,7 +37,7 @@ const SpeakingBackground = ({
 const styles = StyleSheet.create({
   textTitle: {
     position: 'absolute',
-    top: 165,
+    top: '18%',
     zIndex: 3,
     textAlign: "center",
 
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   quesContent: {
     position: 'absolute',
     textAlign: "center",
-    top: 235,
+    top: "28%",
     zIndex: 3,
   },
 });

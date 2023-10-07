@@ -60,7 +60,7 @@ const Game4Result = ({ navigation }) => {
                 />
             </TouchableOpacity>
 
-            <SpeakingTwoButton destination="ListeningGame1" navigation={navigation} />
+            <SpeakingTwoButton destination="SpeakingGame4Result" navigation={navigation} />
         </>
     );
 };
@@ -68,17 +68,17 @@ const Game4Result = ({ navigation }) => {
 const styles = StyleSheet.create({
     hint: {
         position: 'absolute',
-        top: 320,
+        top: '38%',
         zIndex: 3,
     },
     hint2: {
         position: 'absolute',
-        top: 440,
+        top: '52%',
         zIndex: 3,
     },
     fullText: {
         position: 'absolute',
-        top: 550,
+        top: '65%',
         zIndex: 3,
     },
 

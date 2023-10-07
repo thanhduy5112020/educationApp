@@ -5,7 +5,8 @@ import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 const StartScreen = ({ navigation }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigation.navigate('AdvertisingScreen');
+      // navigation.navigate('AdvertisingScreen');
+      navigation.navigate('Main');
     }, 3000);
 
     return () => {
@@ -17,7 +18,8 @@ const StartScreen = ({ navigation }) => {
     <View style={styles.container}>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('AdvertisingScreen');
+          // navigation.navigate('AdvertisingScreen');
+          navigation.navigate('Main');
         }}
       >
         <Image

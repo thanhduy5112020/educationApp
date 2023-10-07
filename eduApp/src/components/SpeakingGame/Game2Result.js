@@ -63,20 +63,20 @@ const Game2Result = ({ navigation }) => {
 const styles = StyleSheet.create({
   blankText: {
     position: 'absolute',
-    top: 290,
+    top: '32%',
 
     zIndex: 3,
   },
 
   hint: {
     position: 'absolute',
-    top: 390,
+    top: '45%',
     zIndex: 3,
   },
 
   fullText: {
     position: 'absolute',
-    top: 550,
+    top: '60%',
     zIndex: 3,
   }
 });

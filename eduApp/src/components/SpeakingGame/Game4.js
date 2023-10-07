@@ -68,27 +68,27 @@ const Game4 = ({ navigation }) => {
 const styles = StyleSheet.create({
   hint: {
     position: 'absolute',
-    top: 320,
+    top: '38%',
     zIndex: 3,
   },
 
   ans1: {
     position: 'absolute',
-    top: 520,
+    top: '60%',
     zIndex: 30,
     left: "32%"
   },
 
   ans2: {
     position: 'absolute',
-    top: 520,
+    top: '60%',
     zIndex: 30,
     left: "45%"
   }, 
 
   ans3: {
     position: 'absolute',
-    top: 520,
+    top: '60%',
     zIndex: 30,
     left: "58%"
   },

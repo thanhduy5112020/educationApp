@@ -48,14 +48,14 @@ const Game1 = ({ navigation }) => {
 const styles = StyleSheet.create({
   wave1: {
     position: 'absolute',
-    top: 321,
+    top: '35%',
     left: '20%',
     zIndex: 3,
     // fontWeight: 700,
   },
   wave2: {
     position: 'absolute',
-    top: 321,
+    top: '35%',
     left: '53%',
     zIndex: 3,
     // fontWeight: 700,
