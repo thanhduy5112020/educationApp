@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.SpeectToTextApp",
@@ -27,9 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "permissions": [
-        "android.permission.RECORD_AUDIO"
-      ],
+      "permissions": ["android.permission.RECORD_AUDIO"],
       "package": "com.anonymous.SpeectToTextApp"
     },
     "web": {
@@ -43,11 +39,11 @@
           "speechRecognitionPermission": "Allow Voice to Text Tutorial to securely recognize user speech"
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "d1c24f18-0b77-484f-939f-9f12edb5637d"
-      }
-    }
+    ]
+    // "extra": {
+    //   "eas": {
+    //     "projectId": "d1c24f18-0b77-484f-939f-9f12edb5637d"
+    //   }
+    // }
   }
 }
